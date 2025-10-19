@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+article{
+    padding: 8px;
+    display: flex;
+    gap: 8px;
+    background: rgb(182, 211, 229);
+    border-radius: 8px;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    text-decoration: none;
+    gap: 8px;
+}
+ul a{
+    color: black;
+}
+ul a:hover{
+    color: blue;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ion-icon{
+    font-size: 24px;
+}
+#likeanddislike{
+    display: flex;
+    gap: 8px;
+}
+#avatarimage{
+    border-radius: 100%;
+}
+#likeanddislike > div > p{
+    font-weight: bold;
+}
+@media (max-width: 768px) {
+    article{
+        flex-direction: column;
+    }
+}

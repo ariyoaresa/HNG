@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Profile Card - HNG stage0</title>
+</head>
+
+<body>
+    <article data-testid="test-profile-card">
+        <div class="left">
+            <img src="https://ariyoaresa.github.io/ariz.png" alt="Avatar Image" data-testid="test-user-avatar"
+                id="avatarimage" width="200px">
+            <h2 aria-label="name">Ariyo Aresa</h2>
+        </div>
+        <div>
+            <p data-testid="test-user-bio">I'm Ariyo Aresa, a frontend developer with experience with html, css,
+                javascript,
+                react, tailwind, git and GitHub
+                <br>I am also a student 400L student at Federal University Oye-Ekiti studying Electrical & Electronics
+                Engineering
+            </p>
+            <ul data-testid="test-user-social-links">
+                <li data-testid="test-user-social-facebook"><a href="https://facebook.com/ifadara.olatunjiaresa"
+                        target="_blank" rel="noopener noreferrer"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                <li data-testid="test-user-social-instagram"><a href="https://instagram.com/ariyoaresa"><ion-icon
+                            name="logo-instagram"></ion-icon></a></li>
+                <li data-testid="test-user-social-tiktok"><a href="https://tiktok.com/just_ariyoaresa"><ion-icon name="logo-tiktok"></ion-icon></a></li>
+                <li data-testid="test-user-social-twitter"><a href="https://x.com/ariyoaresa"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                <li data-testid="test-user-social-linkedin"><a href="https://linkedin.com/in/ariyoaresa"><ion-icon name="logo-linkedin"></ion-icon></a>
+                </li>
+                <li data-testid="test-user-social-github"><a href="https://github.com/ariyoaresa"><ion-icon name="logo-github"></ion-icon></a></li>
+            </ul>
+            <section id="likeanddislike">
+                <div data-testid="test-user-hobbies">
+                    <p>Hobbies:</p>
+                    <ol>
+                        <li>Writing Codes</li>
+                        <li>Playing Table Tennis</li>
+                        <li>Watching Tiktok Videos</li>
+                        <li>Watching Tutorial Videos</li>
+                        <li>Speaking about Tech</li>
+                    </ol>
+                </div>
+                <div data-testid="test-user-dislikes">
+                    <p>Dislikes:</p>
+                    <ol>
+                        <li>Reading</li>
+                        <li>Overcrowded spaces</li>
+                        <li>Noise</li>
+                        <li>Watching Tutorial Videos</li>
+                        <li>Speaking about Tech</li>
+                    </ol>
+                </div>
+            </section>
+            <p>You're viewing this at <span id="time" data-testid="test-user-time"></span>ms</p>
+    </article>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        let Millitime = document.getElementById('time')
+        let date = new Date().getTime();
+        Millitime.innerText = date
+    </script>
+</body>
+
+</html>

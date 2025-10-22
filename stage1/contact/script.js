@@ -13,24 +13,24 @@ form.addEventListener('submit', async (e) => {
     
 
     if (!name) {
-        formStatus.innerHTML = "<p>Name is missing</p>";
+        formStatus.innerHTML = "<p data-testid="test-contact-error-email">Name is missing</p>";
         return;
     } else if (!email) {
-        formStatus.innerHTML = "<p>Email is missing</p>";
+        formStatus.innerHTML = "<p data-testid="test-contact-error-email">Email is missing</p>";
         return;
     } else if (!subject) {
-        formStatus.innerHTML = "<p>Subject is missing</p>";
+        formStatus.innerHTML = "<p data-testid="test-contact-error-email">Subject is missing</p>";
         return;
     } else if (!message) {
-        formStatus.innerHTML = "<p>Message is missing</p>";
+        formStatus.innerHTML = "<p data-testid="test-contact-error-email">Message is missing</p>";
         return;
     } else if(!emailRegex.test(email)){
-        formStatus.innerHTML = "<p>Invalid email format</p>";
+        formStatus.innerHTML = "<p data-testid="test-contact-error-email">Invalid email format</p>";
         return;
     }
 
     // If all fields are filled, you can safely proceed (e.g., send to backend)
-    formStatus.innerHTML = "<p class='success-message'>Form submitted successfully!</p>";
+    formStatus.innerHTML = "<p class='success-message'  data-testid="test-contact-success">Form submitted successfully!</p>";
     console.log({ name, email, subject, message });
 
     // Clear form fields
@@ -39,3 +39,4 @@ form.addEventListener('submit', async (e) => {
     form.elements['subject'].value = '';
     form.elements['message'].value = '';
 });
+
